@@ -132,7 +132,34 @@ namespace LinkedListProblem
             }
             Console.WriteLine("Length of LinkedList is : " + count);
         }
-        public void Display()
+
+        internal void DeleteNodeAtPParticularPosition(int position)
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("LinkedList is Empty");
+                return;
+            }
+            Node temp = this.head;
+            if (position == 0)
+            {
+                this.head = temp.next;
+                return;
+            }
+            for (int i = 0; temp != null && i < position - 1; i++)
+            {
+                temp = temp.next;
+            }
+            if (temp == null || temp.next == null)
+            {
+                return;
+            }
+            Node next = temp.next.next;
+            temp.next = next;
+            Size();
+        }
+
+            public void Display()
         {
             Node temp = this.head;
             if (temp == null)
