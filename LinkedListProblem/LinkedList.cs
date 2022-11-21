@@ -79,6 +79,24 @@ namespace LinkedListProblem
             this.head = this.head.next;
         }
 
+        public void RemoveLastNode()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Linkedlist is empty");
+            }
+            if (head.next == null)
+            {
+                head = null;
+            }
+            Node NewNode = head;
+            while (NewNode.next.next != null)
+            {
+                NewNode = NewNode.next;
+            }
+            NewNode.next = null;
+        }
+
         public void Display()
         {
             Node temp = this.head;
