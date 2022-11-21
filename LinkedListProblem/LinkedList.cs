@@ -97,6 +97,23 @@ namespace LinkedListProblem
             NewNode.next = null;
         }
 
+        public int Search(int value)
+        {
+            Node node = this.head;
+            if (node == null)
+                return -1;
+            int count = 0;
+            while (node != null)
+            {
+                if (node.data == value)
+                {
+                    return count;
+                }
+                node = node.next;
+                count++;
+            }
+            return count;
+        }
         public void Display()
         {
             Node temp = this.head;

@@ -10,7 +10,7 @@ namespace LinkedListProblem
             while (flag)
             {
                 Console.WriteLine("Welcome to Linked List Operations");
-                Console.WriteLine(" 1. Add LinkedList\n 2. Add data in reverse order\n 3. Insert data at particular position\n 4. Remove first element in linked list\n 5. Remove last element in linked list   ");
+                Console.WriteLine(" 1. Add LinkedList\n 2. Add data in reverse order\n 3. Insert data at particular position\n 4. Remove first element in linked list\n 5. Remove last element in linked list\n 6. Search linkedlist to find Node  ");
                 Console.WriteLine("Enter above mention option");
                 int option = Convert.ToInt32(Console.ReadLine());
 
@@ -49,6 +49,13 @@ namespace LinkedListProblem
                         list.Display();
                         break;
                     case 6:
+                        list.Add(56);
+                        list.Add(30);
+                        list.Add(70);
+                        int a = list.Search(30);
+                        Console.WriteLine("The Position of Node with value 30 in LinkedList is " + a);
+                        break;
+                    case 7:
                         flag = false;
                         Console.WriteLine("Try Again");
                         break;
