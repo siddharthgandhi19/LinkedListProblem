@@ -70,6 +70,15 @@ namespace LinkedListProblem
             return this.head;
         }
 
+        public void RemoveFirstNode()
+        {
+            if (this.head == null)
+            {
+                Console.WriteLine("Linkedlist is empty");
+            }
+            this.head = this.head.next;
+        }
+
         public void Display()
         {
             Node temp = this.head;
